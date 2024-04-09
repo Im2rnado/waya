@@ -4,22 +4,57 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
     <title>UNKNOWN Coming Soon</title>
     <link rel="icon" href="assets/img/favicon.png" />
     <script src="sparkle.js"></script>
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            font-family: "Arial", sans-serif;
+        }
+
+        .logo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+        }
+
+        .lead {
+            position: fixed;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3vh;
+            color: #ffffff;
+        }
+
+        .animate {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container mx-auto">
-        <div class="flex flex-col h-screen bg-center bg-cover bg-no-repeat">
-            <div
-                class="grid place-items-start text-left md:place-items-center md:text-center w-full mx-auto p-10 my-20 my-auto space-y-5 cursor-pointer">
-                <img class="logo animate" src="LOGO.PNG" alt="UNKNOWN" />
+    <div class="container">
+        <img class="logo animate" src="LOGO.PNG" alt="UNKNOWN" />
 
-                <p class="lead animate">coming soon</p>
-            </div>
-        </div>
+        <!-- p class="lead animate">coming soon</p -->
     </div>
     <script>
         function setDelay(e, i) {
