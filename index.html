@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>UNKNOWN Coming Soon</title>
+    <link rel="icon" href="assets/img/favicon.png" />
+    <script src="sparkle.js"></script>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="flex flex-col h-screen bg-center bg-cover bg-no-repeat">
+            <div
+                class="grid place-items-start text-left md:place-items-center md:text-center w-full mx-auto p-10 my-20 my-auto space-y-5 cursor-pointer">
+                <img class="logo animate" src="LOGO.PNG" alt="UNKNOWN" />
+
+                <p class="lead animate">coming soon</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function setDelay(e, i) {
+            setTimeout(function () {
+                e.classList.add("fade-in")
+            }, i * 250)
+        }
+        // alternative to DOMContentLoaded
+        document.onreadystatechange = function () {
+            if (document.readyState == "interactive") {
+                var animEls = document.getElementsByClassName("animate")
+                for (var i = 0; i < animEls.length; i++) {
+                    setDelay(animEls[i], i)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
